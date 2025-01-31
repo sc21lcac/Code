@@ -35,7 +35,7 @@ for _ in range(3):  # Adjust the number to match how many forwards you want
 # Add a formation to the fifth subarray
 for _ in range(1):  
     #userSquad[4].append(random.choice(FORMATIONS))
-    ##userSquad[4].append('4321') b
+    ##userSquad[4].append('4321') b c
     #userSquad[4].append('343')
     #userSquad[4].append('523')
     #userSquad[4].append('352')
