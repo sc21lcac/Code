@@ -163,8 +163,24 @@ for i in range(4):
     subsClubs.append(orderedUserSquad[j][1])
     subsCosts.append('£' + orderedUserSquad[j][2])
 
+
+# Define colors for each position
+position_colors = ['yellow']  # Goalkeeper color
+
+# Add colors for defenders
+position_colors.extend(['blue'] * formationSection[0])  
+
+# Add colors for midfielders
+position_colors.extend(['red'] * formationSection[1])  
+
+# Add colors for forwards
+position_colors.extend(['orange'] * formationSection[2])  
+
+# Draw the formation with different colors per position
+ax_scatter = pitch.formation(givenFormation, kind='scatter', s=500, ax=axs[0], color=position_colors)
+
+
 # Draw the formation on the main pitch positionsList
-ax_scatter = pitch.formation(givenFormation, kind='scatter', s=500, ax=axs[0], color='lightgreen')
 ax_text = pitch.formation(givenFormation, positions=positionsList, kind='text', 
                          text=startersNames, va='center', ha='center', 
                          fontsize=10, xoffset=4.6, ax=axs[0])
